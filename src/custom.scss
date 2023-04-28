@@ -1,0 +1,23 @@
+/* import bootstrap to set changes */
+/* make the customizations */
+// $theme-colors: (
+//     // "primary": #bba482,
+//     // "info": tomato,
+//     // "danger": teal
+// );
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+.booktile{
+    width: 15rem;
+}
+
+.tiles {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px 10px;
+}
+
+.category_link {
+    margin-right: 0.5em;
+}

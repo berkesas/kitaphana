@@ -1,0 +1,13 @@
+{
+  "cover_image": "cover.png",
+  "title": "Kitaphana",
+  "api_url": "http://127.0.0.1:8000",
+  "download_url": "http://127.0.0.1:8000/download/",
+  "menus": [
+    {
+      "key": 1,
+      "text": "Esasy",
+      "href": "/"
+    }
+  ]
+}
