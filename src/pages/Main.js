@@ -16,7 +16,7 @@ function Main() {
   //const apiUrl = "http://127.0.0.1:8000";
 
   const downloadClick = (book) => {
-    const http_file = data.download_url + book.id;
+    const http_file = process.env.REACT_APP_DOWNLOAD_URL + book.id;
     console.log(http_file);
     fetch(http_file).then((response) => {
       response.blob().then((blob) => {
@@ -32,12 +32,12 @@ function Main() {
 
   // Function to collect data
   const getData = async (data) => {
-    const response = await fetch(data.api_url + "/categories/").then((response) =>
+    const response = await fetch(process.env.REACT_APP_API_URL + "/categories/").then((response) =>
       response.json()
     );
 
     setCategories(response);
-    const response2 = await fetch(data.api_url + "/books/").then((response2) =>
+    const response2 = await fetch(process.env.REACT_APP_API_URL + "/books/").then((response2) =>
       response2.json()
     );
 

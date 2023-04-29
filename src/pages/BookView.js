@@ -13,7 +13,7 @@ export default function BookView() {
 
   // Function to collect data
   const getData = async (data) => {
-    const response = await fetch(data.api_url + "/books/" + bookNumber).then(
+    const response = await fetch(process.env.REACT_APP_API_URL + "/books/" + bookNumber).then(
       (response) => response.json()
     );
 

@@ -6,6 +6,7 @@ import NavPanel from "./components/NavPanel";
 import Footer from "./components/Footer";
 import Main from "./pages/Main";
 import BookView from "./pages/BookView";
+import MarkDown from "./components/MarkDown";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Routes basename={"/kitaphana"}>
             <Route path="/" element={<Main />} />
             <Route path="/book/:bookNumber" element={<BookView />} />
+            <Route path="/page/:pageName" element={<MarkDown />} />
           </Routes>
           <footer>
             <Footer />

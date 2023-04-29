@@ -1,4 +1,4 @@
-import { Row, Col, Container } from "react-bootstrap";
+import { Image, Container } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
@@ -9,9 +9,9 @@ function NavPanel() {
   const data = useContext(DataContext);
   return (
     <>
-      <Navbar bg="light" variant="light" expand="lg" expanded="false">
+      <Navbar bg="white" variant="light" expand="lg" expanded="false">
         <Container>
-              <Navbar.Brand href="/">{data.title}</Navbar.Brand>
+              <Navbar.Brand href={process.env.PUBLIC_URL}><Image src={process.env.PUBLIC_URL+'/logo_kitaphana.png'}/></Navbar.Brand>
               <Nav className="me-auto">
                 {data.menus.map((v) => {
                   return (
